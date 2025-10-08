@@ -1,5 +1,5 @@
 // js/script.js
-
+//bingolito
 document.addEventListener('DOMContentLoaded', () => {
   // Création de la carte
   const map = L.map('map').setView([20, 0], 2);
