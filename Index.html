@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carte des COP - Réchauffement climatique</title>
+
+  <!-- Feuille de style Leaflet -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet/dist/leaflet.css"
+  />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Zone de la carte */
+    #map {
+      flex: 3;
+      height: 100%;
+    }
+
+    /* Panneau latéral */
+    #sidebar {
+      flex: 1;
+      padding: 1rem;
+      background-color: #f5f5f5;
+      overflow-y: auto;
+      border-left: 1px solid #ddd;
+    }
+
+    #sidebar h2 {
+      margin-top: 0;
+    }
+
+    .cop-item {
+      margin-bottom: 10px;
+      cursor: pointer;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    .cop-item:hover {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Carte -->
+  <div id="map"></div>
+
+  <!-- Panneau latéral -->
+  <div id="sidebar">
+    <h2>Conférences COP</h2>
+    <div id="cop-list"></div>
+  </div>
+
+  <!-- Librairie Leaflet -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Données et script -->
+
+  <script src="js/script.js"></script>
+</body>
+</html>
